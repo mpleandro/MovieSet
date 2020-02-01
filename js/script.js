@@ -8,5 +8,12 @@ function getMovie() {
         .then( response => response.json())
         .then( data => {
                 console.log(data)
+                this.teste(data);
         })
+    }
+
+    function teste(data) {
+        data.Search.forEach(function(filme) {
+        console.log(filme.Title);
+    })
     }
